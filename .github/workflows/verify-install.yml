@@ -1,0 +1,29 @@
+name: Install gazahomes from the public R-universe
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - verify-install.R
+      - packages.json
+      - .github/workflows/verify-install.yml
+
+permissions:
+  contents: read
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Install from the public source index using R 4.4.2
+        env:
+          GAZAHOMES_WAIT_SECONDS: "1200"
+        run: |
+          docker run --rm --user 65534:65534 --cap-drop=ALL \
+            --env HOME=/tmp --env GAZAHOMES_WAIT_SECONDS \
+            --volume "$GITHUB_WORKSPACE/verify-install.R:/work/verify-install.R:ro" \
+            rocker/r-ver:4.4.2 Rscript --vanilla /work/verify-install.R
