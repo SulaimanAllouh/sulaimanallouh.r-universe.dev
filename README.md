@@ -10,7 +10,7 @@
 | Cite this version of the software | [BibTeX](https://github.com/SulaimanAllouh/gaza-resilient-homes-research/blob/gazahomes-v0.0.1/docs/gazahomes/CITATION-0.0.1.bib) |
 | Check which source R-universe tracks | [packages.json](packages.json) |
 
-R-universe builds from `packages/gazahomes` at tag `gazahomes-v0.0.1`. Once the package [appears in the universe](https://sulaimanallouh.r-universe.dev/gazahomes), install it from the R console:
+R-universe builds from `packages/gazahomes` at tag `gazahomes-v0.0.1`. Install [gazahomes from R-universe](https://sulaimanallouh.r-universe.dev/gazahomes) in the R console. An [independent installation check](https://github.com/SulaimanAllouh/sulaimanallouh.r-universe.dev/actions/runs/43229167694/job/131219701903) installed version 0.0.1 in an empty R 4.4.2 library and verified all nine indicators.
 
 ```r
 install.packages("gazahomes", repos = "https://sulaimanallouh.r-universe.dev")
@@ -23,4 +23,4 @@ stopifnot(as.character(packageVersion("gazahomes")) == "0.0.1",
 
 هذا سجلّ حزم R البحثية لسليمان محمد سليمان اللوح. تُتيح حزمة `gazahomes` قراءة تسعة مؤشرات منشورة عن السكن والخدمات الأساسية لدى الأسر المشاركة في دراسة غزة. ويمكن تتبّع كل مؤشر إلى سؤال الدراسة ومصدره باستخدام `gazahomes::home_dictionary()`.
 
-يتوفر [ملف الحزمة الذي اجتاز الفحص وسجل الاختبار على GitHub](https://github.com/SulaimanAllouh/gaza-resilient-homes-research/releases/tag/gazahomes-v0.0.1). وبعد ظهور الإصدار في R-universe، يمكنك استخدام أوامر R أعلاه لتثبيته والتحقق من المؤشرات التسعة. [دليل المشروع بالعربية](https://github.com/SulaimanAllouh/gaza-resilient-homes-research/blob/main/README.ar.md) · [مرجع الاستشهاد بالحزمة](https://github.com/SulaimanAllouh/gaza-resilient-homes-research/blob/gazahomes-v0.0.1/docs/gazahomes/CITATION-0.0.1.bib).
+يتوفر [ملف الحزمة الذي اجتاز الفحص وسجل الاختبار على GitHub](https://github.com/SulaimanAllouh/gaza-resilient-homes-research/releases/tag/gazahomes-v0.0.1). وتُثبّت الحزمة مباشرة من [R-universe](https://sulaimanallouh.r-universe.dev/gazahomes) بالأمر أعلاه. يُظهر [سجل الاختبار](https://github.com/SulaimanAllouh/sulaimanallouh.r-universe.dev/actions/runs/43229167694/job/131219701903) أن التثبيت في مكتبة R فارغة نجح وأن المؤشرات التسعة اجتازت الفحص. [دليل المشروع بالعربية](https://github.com/SulaimanAllouh/gaza-resilient-homes-research/blob/main/README.ar.md) · [مرجع الاستشهاد بالحزمة](https://github.com/SulaimanAllouh/gaza-resilient-homes-research/blob/gazahomes-v0.0.1/docs/gazahomes/CITATION-0.0.1.bib).
